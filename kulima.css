@@ -1,0 +1,143 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling - Dark Green Background */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #013220;  /* Dark green background */
+    color: #fff;  /* White text to contrast with the dark background */
+    transition: background-color 0.3s ease;
+}
+
+/* Header styling with blur effect on left and right sides */
+header {
+    position: relative;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.8) 100%);
+    backdrop-filter: blur(8px); /* Blur for supported browsers */
+}
+
+/* Banner styling */
+header .banner {
+    width: 100%;
+    max-width: 960px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styling */
+header .logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: Adding a blur to the background image only */
+header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(8px);
+    z-index: -1;
+    clip-path: polygon(0 0, 20% 0, 20% 100%, 0 100%);
+}
+
+header:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(8px);
+    z-index: -1;
+    clip-path: polygon(80% 0, 100% 0, 100% 100%, 80% 100%);
+}
+
+/* Styling for the tabs */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.tab-link {
+    background-color: #4CAF50;
+    border: none;
+    outline: none;
+    padding: 14px 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.tab-link:hover {
+    background-color: #45a049;
+}
+
+.tab-link.active {
+    background-color: #388E3C;
+}
+
+/* Styling for the tab content */
+.tab-content {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.tab-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.tab-content ul li {
+    margin: 10px 0;
+}
+
+.tab-content ul li a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.tab-content ul li a:hover {
+    color: #388E3C;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    animation: fadeIn 1.2s ease-in-out;
+}
